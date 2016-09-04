@@ -1,0 +1,30 @@
+# Trim Area daemon
+/dev/socket/tad                        u:object_r:tad_socket:s0
+
+# CPU governor controls
+/dev/socket/mpdecision(/.*)?           u:object_r:mpctl_socket:s0
+/dev/socket/mpctl                      u:object_r:mpctl_socket:s0
+
+/dev/pn547                             u:object_r:nfc_device:s0
+
+/dev/block/platform/msm_sdcc\.1/by-name/modemst1          u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/modemst2          u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/fsg               u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/msm_sdcc\.1/by-name/TA                u:object_r:trim_area_partition_device:s0
+
+/data/system/default_values            u:object_r:mpctl_data_file:s0
+
+/system/vendor/bin/sct_service                u:object_r:sct_exec:s0
+/system/vendor/bin/tad_static                 u:object_r:tad_exec:s0
+/system/vendor/bin/ta_qmi_service             u:object_r:ta_qmi_exec:s0
+/system/vendor/bin/irsc_util                  u:object_r:irsc_util_exec:s0
+/system/vendor/bin/netmgrd                    u:object_r:netmgrd_exec:s0
+/system/vendor/bin/qmuxd                      u:object_r:qmuxd_exec:s0
+/system/vendor/bin/rmt_storage                u:object_r:rmt_storage_exec:s0
+/system/vendor/bin/sensors.qcom               u:object_r:sensors_exec:s0
+/system/bin/thermanager                u:object_r:thermanager_exec:s0
+
+# CMHW
+/sys/devices/virtual/graphics/fb0/hbm                       u:object_r:livedisplay_sysfs:s0
+/sys/devices/virtual/timed_output/vibrator/vtg_level        u:object_r:vibeamp_sysfs:s0
+
